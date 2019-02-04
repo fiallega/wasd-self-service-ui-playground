@@ -135,5 +135,8 @@
       }
     }
   },
-  "defaultProject": "wasd-self-service-ui-playground"
+  "defaultProject": "wasd-self-service-ui-playground",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
