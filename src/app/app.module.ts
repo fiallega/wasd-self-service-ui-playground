@@ -15,9 +15,9 @@ import {AccountManagerComponent} from './accounts/account-manager/account-manage
     AppComponent
   ],
   imports: [
-    AccountsModule,
     BrowserModule,
     AppRoutingModule,
+    AccountsModule.forRoot(),
     StoreModule.forRoot(reducers, { metaReducers }),
     !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
