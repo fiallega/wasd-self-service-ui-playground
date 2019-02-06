@@ -1,6 +1,11 @@
 <p>
-  Current Account
+  ------>  account-manager <-------
 </p>
+
+
+<div>
+  Current Account: <p>{{(store | async).account.accounts[0].accountNumber}}</p>
+</div>
 
 <p>
   Enroll Account
@@ -8,4 +13,8 @@
 
 <p>
   Unenroll Account
+</p>
+
+<p>
+  ------>  account-manager <-------
 </p>

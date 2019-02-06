@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Store} from '@ngrx/store';
+import {AccountState} from '../account.reducer';
+import {SelectAccount} from '../account.actions';
 
 @Component({
   selector: 'wasd-account-manager',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountManagerComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store: Store<AccountState>) { }
 
   ngOnInit() {
+  }
+
+  selectAccount(accountNumber: string) {
+    this.store.dispatch(new SelectAccount(accountNumber))
   }
 
 }
