@@ -10,61 +10,61 @@ export const initialState: AccountState = {
     {
       "accountStatus":"PENDING_STOP",
       "accountAddress":{
-        "zip":"33143-7917",
+        "zip":"33133-1212",
         "country":"USA",
         "address2":null,
         "city":"SOUTH MIAMI",
-        "address1":"6534 SW 84TH ST",
+        "address1":"1232 SW 83TH ST",
         "county":"MIAMI-DADE",
         "state":"FL"
       },
       "person":{
-        "firstName":"STEPHANIE",
+        "firstName":"JOHN",
         "lastName":"DELGADO",
-        "id":"1794740517"
+        "id":"8794640515"
       },
       "accountType":"NORMAL",
-      "accountNumber":"0218746055",
+      "accountNumber":"0213756033",
       "premiseType":"DUPLEXW",
       "stopDate":"2019-02-01"
     },
     {
       "accountStatus":"ACTIVE",
       "business":{
-        "entityName":"BROADWAY PLACE INC",
-        "id":"6475980993"
+        "entityName":"BRANDOM PARK INC",
+        "id":"4475980994"
       },
       "accountAddress":{
-        "zip":"33147-7469",
+        "zip":"33142-7111",
         "country":"USA",
         "address2":null,
         "city":"MIAMI",
-        "address1":"6840 NW 18TH AVE",
+        "address1":"6844 NW 123TH AVE",
         "county":null,
         "state":"FL"
       },
       "accountType":"NORMAL",
-      "accountNumber":"0815092546",
+      "accountNumber":"0915192587",
       "premiseType":"LAUNDRY"
     },
     {
       "accountStatus":"ACTIVE",
       "accountAddress":{
-        "zip":"33165-6229",
+        "zip":"33121-5229",
         "country":"USA",
         "address2":null,
         "city":"MIAMI",
-        "address1":"10521 SW 50TH ST",
+        "address1":"921 SW 30TH ST",
         "county":null,
         "state":"FL"
       },
       "person":{
-        "firstName":"CRISTINE",
-        "lastName":"GONZALEZ",
-        "id":"9272352501"
+        "firstName":"SHAWN",
+        "lastName":"ANGUSTOS",
+        "id":"8272352502"
       },
       "accountType":"NORMAL",
-      "accountNumber":"2312882531",
+      "accountNumber":"4312682543",
       "premiseType":"RES"
     }
   ],
