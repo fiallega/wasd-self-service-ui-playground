@@ -1,18 +1,18 @@
 import { Action } from '@ngrx/store';
 
 export enum AccountActionTypes {
-  LoadAccounts = '[Account] Load Accounts Action',
-  SelectAccount = '[Account] Select Account Action'
+  LoadAccountsAction = '[Account] Load Accounts Action',
+  SelectAccountAction = '[Account] Select Account Action'
   
 }
 
 export class LoadAccounts implements Action {
-  readonly type = AccountActionTypes.LoadAccounts;
+  readonly type = AccountActionTypes.LoadAccountsAction;
 }
 
 
 export class SelectAccount implements Action {
-  readonly type = AccountActionTypes.SelectAccount;
+  readonly type = AccountActionTypes.SelectAccountAction;
 
   constructor(public accountNumber: string){}
 }

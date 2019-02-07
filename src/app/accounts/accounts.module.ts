@@ -8,6 +8,8 @@ import { AccountMetersComponent } from './account-meters/account-meters.componen
 import { AccountHeaderComponent } from './account-header/account-header.component';
 import { StoreModule } from '@ngrx/store';
 import * as fromAccount from './account.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { AccountEffects } from './account.effects';
 
 
   @NgModule({
@@ -27,7 +29,8 @@ import * as fromAccount from './account.reducer';
     AccountHeaderComponent],
   imports: [
     CommonModule,
-    StoreModule.forFeature('account', fromAccount.reducer)
+    StoreModule.forFeature('account', fromAccount.reducer),
+    EffectsModule.forFeature([AccountEffects])
   ]
 })
 export class AccountsModule {

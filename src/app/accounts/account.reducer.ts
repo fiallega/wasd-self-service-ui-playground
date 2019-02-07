@@ -78,7 +78,7 @@ export const initialState: AccountState = {
 export function reducer(state = initialState, action: AccountActions): AccountState {
   switch (action.type) {
 
-    case AccountActionTypes.SelectAccount:
+    case AccountActionTypes.SelectAccountAction:
       let newState = _.clone(state);
       newState.accountSelected = action.accountNumber;
       return newState;
