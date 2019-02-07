@@ -3,16 +3,19 @@
 </p>
 
 
-<div>
-  Current Account: <p>{{(store | async).account.accounts[0].accountNumber}}</p>
+<div *ngFor="let account of (accounts$ | async)">
+  <div>{{account.accountAddress.address1}} - {{account.accountNumber}}</div>
+  <button (click)="selectAccount(account.accountNumber)">Select Account</button>
+  <div *ngIf="account.accountNumber === (accountSelected$ | async)">***</div>
 </div>
 
+
 <p>
-  Enroll Account
+  <button>Enroll Account</button>
 </p>
 
 <p>
-  Unenroll Account
+  <button>Unenroll Account</button>
 </p>
 
 <p>

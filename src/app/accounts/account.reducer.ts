@@ -1,8 +1,9 @@
-import { Action } from '@ngrx/store';
-
+import {AccountActions, AccountActionTypes} from './account.actions';
+import * as _ from 'lodash';
 
 export interface AccountState {
-
+  accounts: Array<Object>;
+  accountSelected: string;
 }
 
 export const initialState: AccountState = {
@@ -68,13 +69,19 @@ export const initialState: AccountState = {
       "premiseType":"RES"
     }
   ],
-  accountSelected: 0
+  accountSelected: "0213756033"
 
 
 };
 
-export function reducer(state = initialState, action: Action): AccountState {
+
+export function reducer(state = initialState, action: AccountActions): AccountState {
   switch (action.type) {
+
+    case AccountActionTypes.SelectAccount:
+      let newState = _.clone(state);
+      newState.accountSelected = action.accountNumber;
+      return newState;
 
     default:
       return state;
