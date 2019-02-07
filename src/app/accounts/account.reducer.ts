@@ -75,7 +75,7 @@ export const initialState: AccountState = {
 };
 
 
-export function reducer(state = initialState, action: AccountActions): AccountState {
+export function accountReducer(state = initialState, action: AccountActions): AccountState {
   switch (action.type) {
 
     case AccountActionTypes.SelectAccountAction:

@@ -29,7 +29,7 @@ import { AccountEffects } from './account.effects';
     AccountHeaderComponent],
   imports: [
     CommonModule,
-    StoreModule.forFeature('account', fromAccount.reducer),
+    StoreModule.forFeature('account', fromAccount.accountReducer),
     EffectsModule.forFeature([AccountEffects])
   ]
 })
