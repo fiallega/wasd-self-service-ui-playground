@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import {Store} from '@ngrx/store';
+import {select, Store} from '@ngrx/store';
 import {AccountState} from '../account.reducer';
 import {SelectAccount} from '../account.actions';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {AppState} from '../../reducers';
+import {accounts, accountSelected} from '../account.selectors';
 
 
 /**
@@ -25,18 +26,18 @@ export class AccountManagerComponent implements OnInit {
   accountSelected$: Observable<string>
   accounts$: Observable<Array<object>>
 
+
   ngOnInit() {
 
     this.accountSelected$ = this.store
       .pipe(
-        map(state => state['account'].accountSelected)
+        select(accountSelected)
       );
 
     this.accounts$ = this.store
       .pipe(
-        map(state => state['account'].accounts)
+        select(accounts)
       );
-
   }
 
 
