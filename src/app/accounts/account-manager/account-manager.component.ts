@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {select, Store} from '@ngrx/store';
 import {AccountState} from '../account.reducer';
-import {SelectAccount} from '../account.actions';
+import {AllAccountsRequested, SelectAccount} from '../account.actions';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {AppState} from '../../reducers';
-import {accounts, accountSelected} from '../account.selectors';
+import {accountNumberSelected, accounts} from '../account.selectors';
 
 
 /**
@@ -31,7 +31,7 @@ export class AccountManagerComponent implements OnInit {
 
     this.accountSelected$ = this.store
       .pipe(
-        select(accountSelected)
+        select(accountNumberSelected)
       );
 
     this.accounts$ = this.store
@@ -48,6 +48,11 @@ export class AccountManagerComponent implements OnInit {
    */
   selectAccount(accountNumber: string) {
     this.store.dispatch(new SelectAccount(accountNumber))
+  }
+
+
+  allAccountsRequested() {
+    this.store.dispatch(new AllAccountsRequested())
   }
 
 }

@@ -1,3 +1,16 @@
 <p>
-  account-header works!
+  ------>  account-header <-------
 </p>
+
+
+
+<div>Address: {{(accountSelected$ | async)?.accountAddress.address1}}</div>
+<div>Account Number: {{(accountSelected$ | async)?.accountNumber}}</div>
+<div>Name: {{(accountSelected$ | async)?.person.firstName}}</div>
+
+
+
+<p>
+  ------<  account-header >-------
+</p>
+

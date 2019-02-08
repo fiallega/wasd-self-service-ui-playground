@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Store} from '@ngrx/store';
+import {select, Store} from '@ngrx/store';
 import {AppState} from '../../reducers';
-import {AccountState} from '../account.reducer';
+import {Observable} from 'rxjs';
+import {accountSelected} from '../account.selectors';
 
 @Component({
   selector: 'wasd-account-information',
@@ -10,10 +11,17 @@ import {AccountState} from '../account.reducer';
 })
 export class AccountInformationComponent implements OnInit {
 
-  constructor(private store: Store<AccountState>) {
+  accountSelected$ : Observable<object>;
+
+  constructor(private store: Store<AppState>) {
   }
 
   ngOnInit() {
+
+    this.accountSelected$ = this.store.pipe(
+      select(accountSelected)
+    );
+
   }
 
 }
